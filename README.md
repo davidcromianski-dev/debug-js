@@ -8,7 +8,7 @@
 
 ## Slide 2
 
-### Mas que ??????? é Debugging?
+### Mas que {emojis} é Debugging?
 
 <cite>"Depuração é como ser o detetive em um filme onde você mesmo é o assassino."</cite>
 
@@ -49,11 +49,66 @@ Brian Kernighan, The Elements of Programming Style, 1978
 
 * Console.log - icone de tédio
 * alert - icone de medo
-* breakpoint - icone de surpresa
 * debugger - icone de euforia
+* breakpoint - icone de surpresa
 
 --- Códigos de exemplo em cada um, com accordion
 
 # Slide 6
 
 ## E o TypeScript?
+
+- Habilitar source maps no tsconfig.json
+- Depuracao direto no TS pelo browser
+- *Codigo TS*
+
+# Slide 7
+
+## Mas quem é que usa WebPack em pleno 2024?
+
+- Ctrl + shift + P
+- Recursos para desenvolvedores
+- Mostra os source maps carregados, permite filtrar, etc.
+- *Código JS com WebPack*
+
+# Slide 8
+
+## E o Node, vai onde?
+
+- Modo de depuração
+- node --inspect-brk
+- Node debug no Chrome
+- *Código Node*
+
+# Slide 9
+
+## Google Chrome DevTools, é magica?
+
+- Ctrl + Shift + I
+- Sources
+- Agrupar
+- Breakpoints
+- Escopo
+- Pilha de chamadas
+- Listeners
+
+# Slide 10
+
+## Maos na massa
+
+- Exercício de depuração
+- *Código com erro*
+- *Código corrigido*
+- *Código com breakpoint*
+- *Código com console.log*
+- ...
+
+# Slide 11
+
+## Conclusão
+
+- Depuração é uma habilidade essencial
+- Entenda o problema e o contexto
+- Use as ferramentas certas
+- Pratique, pratique, pratique
+- *Imagem de um debugger*
