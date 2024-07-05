@@ -1,0 +1,24 @@
+@import 'VanGogh.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#next, #previous {
+    background: none;
+    opacity: 0;
+}
+
+#next:hover {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(var(--vg-color-ixcgray-900), 0.5) 100%);
+    opacity: 1;
+}
+
+#previous:hover {
+    background: linear-gradient(90deg, rgba(var(--vg-color-ixcgray-900), 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 1;
+}
+
+.bar {
+    transition: ease-in-out 300ms;
+}

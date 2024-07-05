@@ -1,0 +1,172 @@
+/** VANGOGH OFFICIAL COLOR PALETTE **/
+
+:root[vgr-scheme="light"] {
+    --vg-color-primary: var(--vg-color-ixcblue-500);
+    --vg-color-danger: var(--vg-color-red-500);
+    --vg-color-success: var(--vg-color-green-600);
+    --vg-color-warning: var(--vg-color-yellow-500);
+    --vg-color-info: var(--vg-color-ixcblue-600);
+}
+
+:root[vgr-scheme="dark"] {
+    --vg-color-primary: var(--vg-color-ixcblue-500);
+    --vg-color-danger: var(--vg-color-red-400);
+    --vg-color-success: var(--vg-color-green-400);
+    --vg-color-warning: var(--vg-color-yellow-400);
+    --vg-color-info: var(--vg-color-ixcblue-400);
+}
+
+/** PALETTE COLORS **/
+:root {
+    --vg-color-neutral: var(--vg-color-ixcgray-500);
+    --vg-color-red: var(--vg-color-red-500);
+    --vg-color-green: var(--vg-color-green-500);
+    --vg-color-yellow: var(--vg-color-yellow-500);
+    --vg-color-blue: var(--vg-color-blue-500);
+    --vg-color-ixcblue: var(--vg-color-ixcblue-500);
+    --vg-color-londonblue: var(--vg-color-londonblue-500);
+    --vg-color-light: var(--vg-color-ixcgray-100);
+    --vg-color-dark: var(--vg-color-ixcgray-900);
+    --vg-color-violet: var(--vg-color-violet-500);
+    --vg-color-emerald: var(--vg-color-emerald-500);
+    --vg-color-navyblue: var(--vg-color-navyblue-500);
+    --vg-color-orange: var(--vg-color-orange-500);
+    --vg-color-bluesky: var(--vg-color-bluesky-500);
+
+    /** IXC BLUE **/
+    --vg-color-ixcblue-100: 202, 251, 253;
+    --vg-color-ixcblue-200: 191, 232, 249;
+    --vg-color-ixcblue-300: 143, 214, 244;
+    --vg-color-ixcblue-400: 96, 195, 238;
+    --vg-color-ixcblue-500: 0, 159, 227;
+    --vg-color-ixcblue-600: 0, 130, 186;
+    --vg-color-ixcblue-700: 0, 101, 144;
+    --vg-color-ixcblue-800: 0, 72, 103;
+    --vg-color-ixcblue-900: 0, 43, 61;
+
+    /** RED - DANGER **/
+    --vg-color-red-100: 255, 224, 224;
+    --vg-color-red-200: 249, 191, 191;
+    --vg-color-red-300: 244, 143, 143;
+    --vg-color-red-400: 238, 96, 96;
+    --vg-color-red-500: 204, 0, 0;
+    --vg-color-red-600: 153, 0, 0;
+    --vg-color-red-700: 102, 0, 0;
+    --vg-color-red-800: 51, 0, 0;
+    --vg-color-red-900: 25, 0, 0;
+
+    /** GREEN - SUCCESS **/
+    --vg-color-green-100: 243, 243, 243;
+    --vg-color-green-200: 191, 249, 196;
+    --vg-color-green-300: 143, 244, 151;
+    --vg-color-green-400: 96, 238, 108;
+    --vg-color-green-500: 10, 194, 25;
+    --vg-color-green-600: 0, 153, 13;
+    --vg-color-green-700: 0, 102, 8;
+    --vg-color-green-800: 0, 61, 5;
+    --vg-color-green-900: 0, 25, 2;
+
+    /** YELLOW - WARNING **/
+    --vg-color-yellow-100: 252, 248, 227;
+    --vg-color-yellow-200: 251, 244, 208;
+    --vg-color-yellow-300: 251, 239, 177;
+    --vg-color-yellow-400: 246, 219, 85;
+    --vg-color-yellow-500: 250, 208, 0;
+    --vg-color-yellow-600: 204, 170, 0;
+    --vg-color-yellow-700: 153, 128, 0;
+    --vg-color-yellow-800: 102, 85, 0;
+    --vg-color-yellow-900: 51, 42, 0;
+
+    /** BLUE - INFO **/
+    --vg-color-blue-100: 208, 221, 251;
+    --vg-color-blue-200: 162, 186, 248;
+    --vg-color-blue-300: 113, 145, 234;
+    --vg-color-blue-400: 75, 109, 214;
+    --vg-color-blue-500: 26, 61, 188;
+    --vg-color-blue-600: 19, 46, 161;
+    --vg-color-blue-700: 13, 34, 135;
+    --vg-color-blue-800: 8, 23, 109;
+    --vg-color-blue-900: 4, 15, 90;
+
+    /** IXC GRAY **/
+    --vg-color-ixcgray-100: 247, 247, 247;
+    --vg-color-ixcgray-200: 221, 224, 225;
+    --vg-color-ixcgray-300: 189, 196, 199;
+    --vg-color-ixcgray-400: 161, 170, 174;
+    --vg-color-ixcgray-500: 124, 138, 144;
+    --vg-color-ixcgray-600: 95, 108, 113;
+    --vg-color-ixcgray-700: 69, 84, 90;
+    --vg-color-ixcgray-800: 38, 50, 55;
+    --vg-color-ixcgray-900: 16, 22, 25;
+
+    /** LONDON BLUE  **/
+    --vg-color-londonblue-100: 235, 243, 246;
+    --vg-color-londonblue-200: 221, 236, 243;
+    --vg-color-londonblue-300: 199, 220, 230;
+    --vg-color-londonblue-400: 143, 182, 199;
+    --vg-color-londonblue-500: 119, 164, 184;
+    --vg-color-londonblue-600: 79, 126, 146;
+    --vg-color-londonblue-700: 66, 95, 108;
+    --vg-color-londonblue-800: 49, 66, 73;
+    --vg-color-londonblue-900: 27, 39, 44;
+
+    /** LIGHT **/
+    --vg-color-white: 255, 255, 255;
+    /** DARK **/
+    --vg-color-black: 0, 0, 0;
+
+    /** VIOLET **/
+    --vg-color-violet-100: 242, 236, 253;
+    --vg-color-violet-200: 223, 208, 251;
+    --vg-color-violet-300: 178, 142, 246;
+    --vg-color-violet-400: 148, 102, 233;
+    --vg-color-violet-500: 124, 64, 235;
+    --vg-color-violet-600: 78, 20, 184;
+    --vg-color-violet-700: 60, 16, 143;
+    --vg-color-violet-800: 35, 9, 84;
+    --vg-color-violet-900: 16, 4, 37;
+
+    /** EMERALD **/
+    --vg-color-emerald-100: 237, 253, 249;
+    --vg-color-emerald-200: 209, 250, 240;
+    --vg-color-emerald-300: 140, 242, 217;
+    --vg-color-emerald-400: 61, 219, 180;
+    --vg-color-emerald-500: 0, 199, 149;
+    --vg-color-emerald-600: 11, 142, 109;
+    --vg-color-emerald-700: 10, 92, 71;
+    --vg-color-emerald-800: 6, 55, 43;
+    --vg-color-emerald-900: 3, 28, 21;
+
+    /** NAVY BLUE **/
+    --vg-color-navyblue-100: 237, 240, 253;
+    --vg-color-navyblue-200: 209, 217, 250;
+    --vg-color-navyblue-300: 140, 161, 242;
+    --vg-color-navyblue-400: 61, 93, 219;
+    --vg-color-navyblue-500: 24, 58, 196;
+    --vg-color-navyblue-600: 11, 37, 142;
+    --vg-color-navyblue-700: 10, 27, 92;
+    --vg-color-navyblue-800: 6, 16, 55;
+    --vg-color-navyblue-900: 4, 11, 37;
+
+    /** ORANGE **/
+    --vg-color-orange-100: 253, 245, 237;
+    --vg-color-orange-200: 250, 230, 209;
+    --vg-color-orange-300: 242, 193, 140;
+    --vg-color-orange-400: 219, 143, 61;
+    --vg-color-orange-500: 239, 125, 0;
+    --vg-color-orange-600: 199, 105, 5;
+    --vg-color-orange-700: 118, 66, 10;
+    --vg-color-orange-800: 66, 37, 5;
+    --vg-color-orange-900: 38, 21, 3;
+
+    /** BLUE SKY **/
+    --vg-color-bluesky-100: 236, 244, 253;
+    --vg-color-bluesky-200: 208, 227, 251;
+    --vg-color-bluesky-300: 137, 186, 245;
+    --vg-color-bluesky-400: 71, 149, 245;
+    --vg-color-bluesky-500: 20, 122, 243;
+    --vg-color-bluesky-600: 5, 92, 199;
+    --vg-color-bluesky-700: 10, 58, 118;
+    --vg-color-bluesky-800: 5, 33, 66;
+    --vg-color-bluesky-900: 3, 19, 38;
+}
