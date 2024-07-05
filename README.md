@@ -76,8 +76,16 @@ Brian Kernighan, The Elements of Programming Style, 1978
 ## E o Node, vai onde?
 
 - Modo de depuração
-- node --inspect-brk
+- node --inspect (websocket)
 - Node debug no Chrome
+- chrome://inspect
+- Remote Target
+- inspect link
+- "Debugger attached"
+- Shows source code
+- Add breakpoints
+- Can use console to debug
+- Can spect Request/Response
 - *Código Node*
 
 # Slide 9
