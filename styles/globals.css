@@ -22,3 +22,7 @@
 .bar {
     transition: ease-in-out 300ms;
 }
+
+.spelling-error {
+    text-decoration: spelling-error;
+}

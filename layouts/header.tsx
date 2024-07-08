@@ -19,7 +19,7 @@ export const Header = () => {
         color="default"
         size="sm"
       >
-        {currentDateTime.toLocaleString("pt-BR")}
+        {/*{currentDateTime.toLocaleString("pt-BR")}*/}
       </Code>
     </header>
   );

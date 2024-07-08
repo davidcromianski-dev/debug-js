@@ -14,8 +14,6 @@
 
 Filipe Fortes [Microsoft, Flipboard]
 
-* Códigos com erro *
-
 --- O que é
 
 # Slide 3
