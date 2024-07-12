@@ -1,3 +1,6 @@
+import WebPackIsSoCool from './OtherClass.js';
+import CanWeCodePlease from './MyClass.js';
+
 (function () {
     const a = Array.from({length: 100}, (_, i) => function () {
     });
@@ -83,12 +86,27 @@
         return p;
     }
 
+    const [v, l] = [
+        document.getElementById('num1'),
+        document.getElementById('num2')
+    ];
+    window.v = v;
+    window.l = l;
+
     for (let i = 0; i < 50; i++) {
         let x = f(i);
         let y = g(i);
         let z = h(i);
     }
 })();
+
+function webpackExample(num = 0, num2 = 0) {
+    const whatDoesThisDoAnyways = new WebPackIsSoCool();
+    const number = (new CanWeCodePlease()).myMethod(num);
+    const person = {talk: 'XGH IS COOL!'};
+    console.error(person.talk());
+    return whatDoesThisDoAnyways.addTwoNumbers(number, num2);
+}
 
 (function () {
     const p = Array.from({length: 50}, (_, i) => i * i * i);
@@ -130,29 +148,6 @@
             u.d3();
         }, i * 5);
     }
+
+    document.getElementById('webpack').addEventListener('click', () => document.getElementById('result').innerHTML = webpackExample(v.value, l.value));
 })();
-
-
-class OtherClass {
-    addTwoNumbers(a, b) {
-        return a + b;
-    }
-
-    generateIntNumber() {
-        return Math.floor(Math.random() * 100);
-    }
-}
-
-class myClass2 {
-    myMethod(num) {
-        return `${num}`;
-    }
-}
-
-window.webpackExample = function webpackExample(num = 0, num2 = 0) {
-    const otherFile = new OtherClass()
-    const number = (new myClass2()).myMethod(num);
-    const person = {};
-    console.log(person.talk());
-    return otherFile.addTwoNumbers(number, num2);
-}

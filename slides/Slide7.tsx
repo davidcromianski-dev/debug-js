@@ -1,6 +1,7 @@
 import { atomOneDark, CodeBlock } from "react-code-blocks";
 import { SiEsbuild, SiRollupdotjs, SiVite, SiWebpack } from "react-icons/si";
 import Link from "next/link";
+import { Button } from "@nextui-org/react";
 
 import { Slide } from "@/components/Slide";
 
@@ -40,6 +41,11 @@ module.exports = {
           text={code}
           theme={atomOneDark}
         />
+        <Link href="/examples/webpack/index.html" target="_blank">
+          <Button color="secondary" variant="flat">
+            Teste aqui!
+          </Button>
+        </Link>
         <div className="flex justify-center items-center gap-4">
           <Link
             href="https://webpack.js.org/configuration/devtool/"
