@@ -1,12 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src"
-    //    "sourceMap": true
-  },
   "include": [
-    "src"
-  ]
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    // Mapeia o código JavaScript gerado de volta para o código TypeScript original para fins de depuração.,
+    "sourceMap": true,
+    "module": "ES6",
+    "moduleResolution": "node",
+    "target": "ES6",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }

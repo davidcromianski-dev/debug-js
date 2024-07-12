@@ -1,6 +1,5 @@
 import { atomOneDark, CodeBlock } from "react-code-blocks";
-import { Button, useDisclosure } from "@nextui-org/react";
-import { FaRegMap } from "react-icons/fa6";
+import { Button, Link, useDisclosure } from "@nextui-org/react";
 import {
   Modal,
   ModalBody,
@@ -15,24 +14,23 @@ export const Slide6 = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const code = `{
-    "compilerOptions": {
-        "target": "es6",                     // Especifica a versão do ECMAScript para o qual o código deve ser transpilado
-        "module": "commonjs",                // Especifica o sistema de módulos
-        "sourceMap": true,                   // Gera arquivos .map para depuração
-        "outDir": "./dist",                  // Diretório de saída para os arquivos transpilados
-        "rootDir": "./src",                  // Diretório raiz para os arquivos de entrada
-        "strict": true,                      // Habilita todas as verificações estritas
-        "esModuleInterop": true,             // Habilita a interoperabilidade com módulos ES
-        "skipLibCheck": true,                // Ignora a verificação de tipos de arquivos de declaração
-        "forceConsistentCasingInFileNames": true  // Garante consistência na diferenciação entre maiúsculas e minúsculas nos nomes de arquivos
-    },
-    "include": [
-        "src"                                // Inclui todos os arquivos TypeScript no diretório "src"
-    ],
-    "exclude": [
-        "node_modules",                      // Exclui o diretório "node_modules"
-        "**/*.spec.ts"                       // Exclui arquivos de teste (se estiver usando arquivos .spec.ts para testes)
-    ]
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    // Mapeia o código JavaScript gerado de volta para o código TypeScript original para fins de depuração.,
+    //    "sourceMap": true,
+    "module": "ES6",
+    "moduleResolution": "node",
+    "target": "ES6",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }
 `;
 
@@ -44,17 +42,22 @@ export const Slide6 = () => {
       <div>
         <h1 className="font-bold text-4xl">E com TypeScript? &#129300;</h1>
       </div>
-      <section className="flex gap-5 w-full h-full overflow-auto">
+      <section className="flex gap-5 w-full h-full overflow-auto items-center justify-around">
         <CodeBlock
           showLineNumbers
-          highlight={"5"}
+          highlight={"9,10,11,12"}
           language="json"
           text={code}
           theme={atomOneDark}
         />
         <Button color="primary" variant="flat" onPress={() => onOpen()}>
-          <FaRegMap /> Arquivo .map?
+          .map?
         </Button>
+        <Link href="/examples/ts/index.html" target="blank">
+          <Button color="secondary" variant="flat">
+            Teste aqui!
+          </Button>
+        </Link>
       </section>
       <Modal
         backdrop="blur"
