@@ -25,7 +25,7 @@ export default function DefaultLayout({
     >
       <Head />
       <Header />
-      <main className="w-full h-full">{children}</main>
+      <main className="w-full h-full overflow-auto">{children}</main>
       <Footer />
       {/*<script src="examples/ts/dist/main.js" />*/}
       {/*<script src="examples/webpack/dist/bundle.js" />*/}

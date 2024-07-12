@@ -38,13 +38,13 @@ export const Slide6 = () => {
 
   return (
     <Slide
-      classNames="flex flex-col justify-center items-start text-start gap-20 text-ixcgray-200"
+      classNames="flex flex-col justify-start items-start text-start gap-10 text-ixcgray-200"
       id={6}
     >
       <div>
         <h1 className="font-bold text-4xl">E com TypeScript? &#129300;</h1>
       </div>
-      <section className="flex gap-5">
+      <section className="flex gap-5 w-full h-full overflow-auto">
         <CodeBlock
           showLineNumbers
           highlight={"5"}
@@ -71,9 +71,8 @@ export const Slide6 = () => {
               <ModalBody>
                 <p>
                   Arquivos <code>.map</code> são arquivos de mapeamento que
-                  permitem que você depure seu código TypeScript diretamente no
-                  navegador, mesmo que o código tenha sido transpilado para
-                  JavaScript.
+                  permitem que você depure seu código TypeScript transpilado
+                  diretamente no navegador.
                 </p>
                 <p>
                   Ao habilitar a opção <code>sourceMap</code> no arquivo{" "}

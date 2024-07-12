@@ -1,10 +1,132 @@
-import { Accordion, AccordionItem, Button } from "@nextui-org/react";
+import {
+  Accordion,
+  AccordionItem,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 import { IoBugOutline, IoTerminalOutline } from "react-icons/io5";
 import { BsChatSquareDots } from "react-icons/bs";
 import { FaRegFlag } from "react-icons/fa6";
-import { Code } from "@nextui-org/code";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+} from "@nextui-org/modal";
+import { CodeBlock, dracula } from "react-code-blocks";
 
 import { Slide } from "@/components/Slide";
+
+const CodeModal = ({
+  text,
+  code,
+  color,
+}: {
+  text: string;
+  code: string;
+  color: "default" | "primary" | "secondary" | "danger" | "warning" | "success";
+}) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  return (
+    <>
+      <Button color={color} size="sm" variant="bordered" onClick={onOpen}>
+        {text}
+      </Button>
+      <Modal
+        backdrop="blur"
+        className="bg-stone-900 text-white border-1 border-stone-800"
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">{text}</ModalHeader>
+              <ModalBody>
+                <CodeBlock
+                  showLineNumbers
+                  language="javascript"
+                  text={code}
+                  theme={dracula}
+                />
+              </ModalBody>
+              <ModalFooter>
+                <Button
+                  color="secondary"
+                  variant="flat"
+                  onPress={() => eval(code)}
+                >
+                  Testar
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const ModalAlert = () => {
+  const code = `alert("Isso é um alert");`;
+
+  return <CodeModal code={code} color="danger" text="Alert" />;
+};
+
+const ModalConsoleLog = () => {
+  const code = `console.log("Isso é um console.log");`;
+
+  return <CodeModal code={code} color="primary" text="Log" />;
+};
+
+const ModalConsoleWarn = () => {
+  const code = `console.warn("Isso é um console.warn");`;
+
+  return <CodeModal code={code} color="warning" text="Warn" />;
+};
+
+const ModalConsoleError = () => {
+  const code = `console.error("Isso é um console.error");`;
+
+  return <CodeModal code={code} color="danger" text="Error" />;
+};
+
+const ModalConsoleTrace = () => {
+  const code = `console.trace("Isso é um console.trace");`;
+
+  return <CodeModal code={code} color="secondary" text="Trace" />;
+};
+
+const ModalConsoleGroup = () => {
+  const code = `console.group("Isso é um console.group");
+  console.log("Primeiro log");
+console.groupEnd();`;
+
+  return <CodeModal code={code} color="primary" text="Group" />;
+};
+
+const ModalConsoleTable = () => {
+  const code = `console.table({
+  name: "John",
+  age: 30,
+  city: "New York",
+  country: "USA",
+});`;
+
+  return <CodeModal code={code} color="warning" text="Table" />;
+};
+
+const ModalDebugger = () => {
+  const code = `let x = 1;
+x += 4;
+debugger;
+x++;
+console.log(x)`;
+
+  return <CodeModal code={code} color="primary" text="Debugger" />;
+};
 
 export const Slide5 = () => {
   const itemClasses = {
@@ -47,18 +169,9 @@ export const Slide5 = () => {
           mensagem ao usuário. Porém, o <code>alert</code> é uma forma de
           debugging muito rudimentar e limitada.
           <br />
-          <Code color="primary" size="sm">
-            alert("Isso é um alert")
-          </Code>
-          &nbsp;&nbsp;
-          <Button
-            color="primary"
-            size="sm"
-            variant="flat"
-            onClick={() => alert("Isso é um alert")}
-          >
-            Alert
-          </Button>
+          <div className="flex gap-4 mt-4">
+            <ModalAlert />
+          </div>
         </AccordionItem>
         <AccordionItem
           key="2"
@@ -66,7 +179,7 @@ export const Slide5 = () => {
           startContent={<IoTerminalOutline className="text-warning text-2xl" />}
           title={
             <code className="text-white text-lg">
-              Console.log &#128580;&#129393;&#129396;
+              Console &#128580;&#129393;&#129396;
             </code>
           }
         >
@@ -75,50 +188,14 @@ export const Slide5 = () => {
           O <code>console.log</code> é uma ferramenta poderosa e muito útil para
           debugar o código. Porém, não é a melhor forma de debugging.
           <br />
-          <Code color="primary" size="sm">
-            console.log("Isso é um console.log")
-          </Code>
-          &nbsp;&nbsp;
-          <Button
-            color="primary"
-            size="sm"
-            variant="flat"
-            onClick={() => {
-              console.log("Isso é um console.log");
-            }}
-          >
-            Console.log
-          </Button>
-          <br />
-          <Code color="warning" size="sm">
-            console.warn("Isso é um console.warn")
-          </Code>
-          &nbsp;&nbsp;
-          <Button
-            color="warning"
-            size="sm"
-            variant="flat"
-            onClick={() => {
-              console.warn("Isso é um console.warn");
-            }}
-          >
-            Console.log
-          </Button>
-          <br />
-          <Code color="danger" size="sm">
-            console.error("Isso é um console.error")
-          </Code>
-          &nbsp;&nbsp;
-          <Button
-            color="danger"
-            size="sm"
-            variant="flat"
-            onClick={() => {
-              console.error("Isso é um console.error");
-            }}
-          >
-            Console.log
-          </Button>
+          <div className="flex gap-4 mt-4">
+            <ModalConsoleLog />
+            <ModalConsoleWarn />
+            <ModalConsoleError />
+            <ModalConsoleTrace />
+            <ModalConsoleGroup />
+            <ModalConsoleTable />
+          </div>
         </AccordionItem>
         <AccordionItem
           key="3"
@@ -136,34 +213,9 @@ export const Slide5 = () => {
           uma ferramenta poderosa e muito útil para debugar o código. É sem
           dúvida a melhor forma de debugging em JavaScript.
           <br />
-          <Code color="primary" size="sm">
-            {`function debug() {
-              let x = 1;
-              x += 4;
-              debugger;
-              x++;
-              return x;
-            }
-            debug();
-            `}
-          </Code>
-          &nbsp;&nbsp;
-          <Button
-            color="primary"
-            size="sm"
-            variant="flat"
-            onClick={() => {
-              let x = 1;
-
-              x += 4;
-              debugger;
-              x++;
-
-              return x;
-            }}
-          >
-            Debugger
-          </Button>
+          <div className="flex gap-4 mt-4">
+            <ModalDebugger />
+          </div>
         </AccordionItem>
         <AccordionItem
           key="4"

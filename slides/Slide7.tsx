@@ -24,7 +24,7 @@ module.exports = {
 
   return (
     <Slide
-      classNames="flex flex-col justify-center items-start text-start gap-20 text-ixcgray-200"
+      classNames="flex flex-col justify-center items-start text-start gap-10 text-ixcgray-200"
       id={7}
     >
       <div>

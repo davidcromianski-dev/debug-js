@@ -119,6 +119,18 @@ module.exports = {
                     800: 'rgba(var(--vg-color-ixcgray-800))',
                     900: 'rgba(var(--vg-color-ixcgray-900))',
                 },
+                silver: {
+                    DEFAULT: 'rgba(var(--vg-color-silver))',
+                    100: 'rgba(var(--vg-color-silver-100))',
+                    200: 'rgba(var(--vg-color-silver-200))',
+                    300: 'rgba(var(--vg-color-silver-300))',
+                    400: 'rgba(var(--vg-color-silver-400))',
+                    500: 'rgba(var(--vg-color-silver-500))',
+                    600: 'rgba(var(--vg-color-silver-600))',
+                    700: 'rgba(var(--vg-color-silver-700))',
+                    800: 'rgba(var(--vg-color-silver-800))',
+                    900: 'rgba(var(--vg-color-silver-900))',
+                },
                 violet: {
                     DEFAULT: 'rgba(var(--vg-color-violet))',
                     100: 'rgba(var(--vg-color-violet-100))',

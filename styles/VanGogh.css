@@ -18,7 +18,12 @@
 
 /** PALETTE COLORS **/
 :root {
+    /**
+    * @deprecated Use --vg-color-ixcgray instead
+    */
     --vg-color-neutral: var(--vg-color-ixcgray-500);
+    --vg-color-ixcgray: var(--vg-color-ixcgray-500);
+    --vg-color-silver: var(--vg-color-silver-500);
     --vg-color-red: var(--vg-color-red-500);
     --vg-color-green: var(--vg-color-green-500);
     --vg-color-yellow: var(--vg-color-yellow-500);
@@ -98,6 +103,17 @@
     --vg-color-ixcgray-700: 69, 84, 90;
     --vg-color-ixcgray-800: 38, 50, 55;
     --vg-color-ixcgray-900: 16, 22, 25;
+
+    /** SILVER **/
+    --vg-color-silver-100: 240, 240, 240;
+    --vg-color-silver-200: 233, 233, 233;
+    --vg-color-silver-300: 194, 194, 194;
+    --vg-color-silver-400: 168, 168, 168;
+    --vg-color-silver-500: 134, 134, 134;
+    --vg-color-silver-600: 105, 105, 105;
+    --vg-color-silver-700: 80, 80, 80;
+    --vg-color-silver-800: 47, 47, 47;
+    --vg-color-silver-900: 21, 21, 21;
 
     /** LONDON BLUE  **/
     --vg-color-londonblue-100: 235, 243, 246;

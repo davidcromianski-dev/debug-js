@@ -9,7 +9,7 @@ export const Slide = ({
   classNames?: string;
   id: number;
 }) => {
-  const className = `slide basis-[80%] h-full ${classNames}`;
+  const className = `slide basis-[80%] h-full overflow-auto pb-4 ${classNames}`;
 
   return (
     <div className={className} data-id={id}>

@@ -4,6 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--vg-color-silver-900));
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
 #next, #previous {
     background: none;
     opacity: 0;
@@ -26,3 +44,4 @@
 .spelling-error {
     text-decoration: spelling-error;
 }
+

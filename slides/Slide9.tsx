@@ -13,7 +13,7 @@ import { Slide } from "@/components/Slide";
 export const Slide9 = () => {
   return (
     <Slide
-      classNames="flex flex-col justify-center items-center text-center gap-20 text-ixcgray-200"
+      classNames="flex flex-col justify-start items-center text-center gap-10 text-ixcgray-200 pt-20"
       id={9}
     >
       <div>
